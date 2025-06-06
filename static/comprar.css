@@ -1,0 +1,82 @@
+/* Estilo general del body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor del formulario */
+form {
+  background: white;
+  max-width: 420px;
+  width: 100%;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* Etiquetas */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+  margin-top: 18px;
+}
+
+/* Inputs y select */
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.8px solid #ccc;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0,123,255,0.3);
+}
+
+/* Botón */
+button {
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Campo oculto no necesita estilo */
+input[type="hidden"] {
+  display: none;
+}
+

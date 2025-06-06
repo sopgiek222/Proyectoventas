@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+
+    <title>Iniciar Sesion</title>
+</head>
+<body>
+
+    <form action="/login" method="POST">
+        <h2>Iniciar Sesion</h2>
+        <label >Usuario:</label>
+        <input type="text" name="txtuser" required><br><br>
+        <label> Clave:</label>
+        <input type="password" name="txtclave" required>
+        <button type="submit">Iniciar Sesion </button>
+        {%if mensaje%}
+         <p style="color: red;">{{mensaje}}</p>
+        {% endif %}
+    </form>
+
+</body>
+</html>

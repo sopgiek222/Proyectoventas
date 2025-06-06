@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{{ url_for('static', filename='actualizar.css') }}">
+    <title>Actualizar</title>
+</head>
+<body>
+
+    <form action="/actualizar_ID_cliente" method="POST">
+        <input type="hidden" name="txtid" value="{{ clientes[0] }}">
+        <label for="txtnombre">NOMBRE:</label>
+        <input type="text" name="txtnombre" id="txtnombre" value="{{ clientes[1] }}" required>
+        <label for="txtnit">NIT:</label>
+        <input type="text" name="txtnit" id="txtnit" value="{{ clientes[2] }}" required>
+        <input type="submit" value="ACTUALIZAR">
+    </form>
+
+</body>
+</html>
