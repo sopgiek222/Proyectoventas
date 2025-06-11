@@ -1,88 +1,53 @@
-body {
-    background-color: #1a001f; /* Morado muy oscuro */
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
 
-h1 {
-    margin-top: 20px;
-    color: white;
+body {
+    background-color: #000000; /* Fondo negro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
 }
 
 form {
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    max-width: 800px;
-}
+    margin-top: 20px;}
 
 label {
     display: block;
-    margin-bottom: 5px;
-    color: white;
+    margin-top: 10px;
+    color: #f0dfff;
 }
 
-input[type="text"] {
-    padding: 8px;
-    border-radius: 5px;
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
     border: none;
-    background-color: #d8b4fe; /* Morado claro */
-    color: white;
-    width: 200px;
-    text-align: center;
+    border-radius: 8px;
+    background-color: #4d0066;
+    color: #fff;
 }
 
-button {
-    padding: 8px 12px;
-    background-color: #f3e8ff; /* Muy claro */
-    color: #4b0082; /* Morado fuerte */
+button,
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #a100ff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
     cursor: pointer;
-    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-table {
-    margin: 0 auto 40px auto;
-    border-collapse: collapse;
-    width: 90%;
-    max-width: 1200px;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #3b0a50;
-}
-
-th {
-    background-color: #c084fc; /* Encabezado más claro */
-    color: white;
-    padding: 12px;
-}
-
-td {
-    padding: 12px;
-    text-align: center;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #6b21a8; /* Lila medio */
-}
-
-tr:nth-child(odd) {
-    background-color: #7e22ce; /* Lila oscuro */
-}
-
-a {
-    color: #c4b5fd; /* Azul/morado claro */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
+button:hover,
+input[type="submit"]:hover {
+    background-color: #c44dff;
 }

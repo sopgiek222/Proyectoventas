@@ -53,8 +53,8 @@ def generar_pdf(id):
     sql = """
     SELECT c.nombre, c.nit, co.producto, co.cantidad, co.costo
     FROM tbcompra co
-    INNER JOIN tbcliente c ON co.ID_cliente = c.ID_cliente
-    WHERE co.ID_cliente = %s
+    INNER JOIN tbcliente c ON co.tbcliente_ID_cliente = co.tbcliente_ID_cliente
+    WHERE co.tbcliente_ID_cliente = %s
     """
     cursor.execute(sql, (id,))
     datos = cursor.fetchall()
