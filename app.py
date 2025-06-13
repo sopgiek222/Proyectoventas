@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session, make_response, clave_hash
+from flask import Flask, render_template, request, redirect, session, make_response
 from config.conexion import conexion
 from fpdf import FPDF
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -57,16 +57,17 @@ def insertar_usuario ():
     user=request.form['txtuser']
     clave=request.form['txtclave']
     rol=request.form['txtrol']
+    claveRepetir=request.form ['txtclaveRepetir']
     
     clave_hash=generate_password_hash(clave)
-    cursor=conexion.cursor()
-    sql="INSERT INTO tbusuario(user,clave,rol) VALUES(%s, %s, %s)"
-    cursor.execute(sql,(user,clave_hash,rol))
-    conexion.commit()
-    cursor.close()
-
-
-
+    if clave==claveRepetir:
+        cursor=conexion.cursor()
+        sql="INSERT INTO tbusuario(user,clave,rol) VALUES(%s, %s, %s)"
+        cursor.execute(sql,(user,clave_hash,rol))
+        conexion.commit()
+        cursor.close()
+    else:
+        return render_template ('usuarios.html', mensaje="Las contraseñas no coinciden")
     return redirect('/logout')
 
 
