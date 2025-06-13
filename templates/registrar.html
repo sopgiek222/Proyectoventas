@@ -13,32 +13,45 @@
 </head>
 <body>
       
+    <p><a href="/logout">Cerrar Sesion</a></p>  
          
    
     <h2>{{ mensaje }}</h2>
+<!-- BOTÓN para abrir el modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegistro">
+  Registrar nuevo dato
+</button>
 
-    <form action="/insertar" method="POST">
-        <label for="txtnombre">NOMBRE</label>
-        <input type="text" name="txtnombre" id="txtnombre" required>
-
-        <label for="txtnit">NIT</label>
-        <input type="text" name="txtnit" id="txtnit" required>
-
-        <input type="submit" value="REGISTRAR">
-    </form>
-
-   <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="registroLabel" aria-hidden="true">
+<!-- MODAL con el formulario -->
+<div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="registroLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+
+      <!-- HEADER del modal -->
       <div class="modal-header">
-        <h5 class="modal-title" id="registroLabel">Nuevo Cliente</h5>
+        <h5 class="modal-title" id="registroLabel">Registrar nuevo dato</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
-      <div class="modal-body" id="contenido-modal">
-      
- 
 
+      <!-- BODY con el formulario -->
+      <div class="modal-body">
+        <form action="/insertar" method="POST">
+          <div class="mb-3">
+            <label for="txtnombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" name="txtnombre" id="txtnombre" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="txtnit" class="form-label">NIT</label>
+            <input type="text" class="form-control" name="txtnit" id="txtnit" required>
+          </div>
+
+          <div class="d-grid">
+            <input type="submit" class="btn btn-success" value="Registrar">
+          </div>
+        </form>
       </div>
+
     </div>
   </div>
 </div>
@@ -68,11 +81,11 @@
        </div>
    </div>
    
-    <p><a href="/logout">Cerrar Sesion</a></p>  
-
-    <div class="insertarDatos">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalRegistro" id="modal" title="Insertar Datos">+</a>
-    </div>
+    
+        <div class="insertarDatos">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#modalRegistro" id="modal" title="Insertar Datos">+</a>
+        </div>
+    
 
     <table border="1">
         <tr>
