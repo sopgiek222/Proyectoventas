@@ -1,6 +1,8 @@
-from flask import Flask, render_template, request, redirect, session, make_response
+from flask import Flask, render_template, request, redirect, session, make_response, clave_hash
 from config.conexion import conexion
 from fpdf import FPDF
+from werkzeug.security import generate_password_hash, check_password_hash
+
 
 app = Flask(__name__)
 app.secret_key="Miclave"
@@ -55,10 +57,11 @@ def insertar_usuario ():
     user=request.form['txtuser']
     clave=request.form['txtclave']
     rol=request.form['txtrol']
-
+    
+    clave_hash=generate_password_hash(clave)
     cursor=conexion.cursor()
     sql="INSERT INTO tbusuario(user,clave,rol) VALUES(%s, %s, %s)"
-    cursor.execute(sql,(user,clave,rol))
+    cursor.execute(sql,(user,clave_hash,rol))
     conexion.commit()
     cursor.close()
 

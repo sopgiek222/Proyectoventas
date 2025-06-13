@@ -17,23 +17,18 @@
          
    
     <h2>{{ mensaje }}</h2>
-<!-- BOTÓN para abrir el modal -->
+
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegistro">
   Registrar nuevo dato
 </button>
 
-<!-- MODAL con el formulario -->
+
 <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="registroLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 
-      <!-- HEADER del modal -->
-      <div class="modal-header">
-        <h5 class="modal-title" id="registroLabel">Registrar nuevo dato</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-
-      <!-- BODY con el formulario -->
+    
+    
       <div class="modal-body">
         <form action="/insertar" method="POST">
           <div class="mb-3">
