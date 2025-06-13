@@ -29,12 +29,12 @@ def login():
         clave=request.form['txtclave']
 
         cursor=conexion.cursor()
-        sql='Select * from tbusuario where user=%s AND clave =%s'
-        cursor.execute(sql,(user,clave))
+        sql='Select * from tbusuario where user=%s'
+        cursor.execute(sql,(user,))
         usuario=cursor.fetchone()
         cursor.close()
 
-        if usuario:
+        if usuario and check_password_hash(usuario[2],clave):
             session['usuario']=usuario[1]
             session['clave']=usuario[3]
             return redirect('/')
@@ -64,6 +64,8 @@ def insertar_usuario ():
     cursor.execute(sql,(user,clave_hash,rol))
     conexion.commit()
     cursor.close()
+
+
 
     return redirect('/logout')
 
