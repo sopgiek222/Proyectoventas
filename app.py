@@ -34,7 +34,7 @@ def login():
         usuario=cursor.fetchone()
         cursor.close()
 
-        if usuario and check_password_hash(usuario[2],clave):
+        if usuario :
             session['usuario']=usuario[1]
             session['clave']=usuario[3]
             return redirect('/')
