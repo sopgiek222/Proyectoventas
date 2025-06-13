@@ -50,6 +50,20 @@ def logout():
 def usuarios ():
     return render_template('usuarios.html')
 
+@app.route ('/insertar_usuarios', methods=['POST'])
+def insertar_usuario ():
+    user=request.form['txtuser']
+    clave=request.form['txtclave']
+    rol=request.form['txtrol']
+
+    cursor=conexion.cursor()
+    sql="INSERT INTO tbusuario(user,clave,rol) VALUES(%s, %s, %s)"
+    cursor.execute(sql,(user,clave,rol))
+    conexion.commit()
+    cursor.close()
+
+    return redirect('/logout')
+
 
 @app.route('/reporte/<id>')
 def generar_pdf(id):
