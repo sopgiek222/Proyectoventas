@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, session, make_response
 from config.conexion import conexion
 from fpdf import FPDF
-from werkzeug.security import generate_password_hash, check_password_hash
+
 
 
 app = Flask(__name__)
