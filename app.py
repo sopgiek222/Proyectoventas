@@ -46,6 +46,11 @@ def logout():
     return redirect('/login')
 
 
+@app.route('/usuarios')
+def usuarios ():
+    return render_template('usuarios.html')
+
+
 @app.route('/reporte/<id>')
 def generar_pdf(id):
     cursor = conexion.cursor()
@@ -99,6 +104,8 @@ def generar_pdf(id):
     response.headers['Content-Type'] = 'application/pdf'
     response.headers['Content-Disposition'] = 'inline; filename=reporte_compras.pdf'
     return response
+
+  
 
 def mostrarCliente(id):
     cursor=conexion.cursor()
