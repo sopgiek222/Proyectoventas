@@ -1,53 +1,74 @@
+table{
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+th, td{
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+th{
+    background-color: #f2f2f2;
+    text-align: center;
+}
+.buscar{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px 10px 0px;
+}
+.contenidoBuscar{
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+.insertarDatos{
+   
+font-size: 40px;
+font-weight: bold;
+width: 89%;
+text-align: right;
+margin: 10px 0px 10px 0px;
+}
 
-body {
-    background-color: #000000; /* Fondo negro */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #eee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 20px;
+.insertarDatos a{
+    text-decoration: none;
+}
+input[type=text]{
+    width: 100%;
+    border-radius: 3px;
+    padding: 5px;
+    border: 1px solid #534d4d;
+    margin: 10px 0px 10px 0px;
     box-sizing: border-box;
-    flex-direction: column;
+    resize: vertical;
+    }
+input[type=submit]{
+    width: 20%;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #0c6828;
+    color: #fcfbfb;
+    
+    margin: 10px 0px 10px 0px;
+    box-sizing: border-box;
+    resize: vertical;
+    }
+label{
+    display: inline-block;
+ 
 }
 
-form {
-    margin-top: 20px;}
-
-label {
-    display: block;
-    margin-top: 10px;
-    color: #f0dfff;
+.logo-usuario{
+    width: 25px;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: none;
-    border-radius: 8px;
-    background-color: #4d0066;
-    color: #fff;
+table{
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
 }
-
-button,
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #a100ff;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover,
-input[type="submit"]:hover {
-    background-color: #c44dff;
-}
+th, td{
+    padding: 8px;
